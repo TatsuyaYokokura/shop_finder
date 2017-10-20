@@ -22,6 +22,7 @@
 ## DB設計
 
 **shops_table**
+
 |カラム名|型|概要|
 |:--:|:--:|:--:|
 | id           | integer      |              |
@@ -36,12 +37,13 @@
 | opne_time    | string       | 営業時間      |
 | link         | string       | HPリンク      |
 
-***アソシエーション***
+****アソシエーション****
 * has_many :reviews
 * has_many :images
 
 
 **reviews_table**
+
 |カラム名|型|概要|
 |:--:|:--:|:--:|
 | id           | integer      |              |
@@ -49,12 +51,13 @@
 | user_id      | integer      |              |
 | review       | text         | 口コミ        |
 
-***アソシエーション***
+****アソシエーション****
 * belongs_to :shop
 * belongs_to :user
 
 
 **images_table**
+
 |カラム名|型|概要|
 |:--:|:--:|:--:|
 | id           | integer      |              |
@@ -62,17 +65,18 @@
 | image        | text         | 写真          |
 | memo         | string       | 写真の説      |
 
-***アソシエーション***
+****アソシエーション****
 * belongs_to :shop
 
 
 **users_table**
+
 |カラム名|型|概要|
 |:--:|:--:|:--:|
 | id           | integer      |              |
 | email        | integer      | メール        |
 | nickname     | text         | 名前          |
 
-***アソシエーション***
+****アソシエーション****
 * has_many :reviews
 
