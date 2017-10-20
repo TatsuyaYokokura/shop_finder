@@ -22,8 +22,9 @@
 ## DB設計
 
 **shops_table**
-| Center align | Center align | Center align |
-|:-------------|-------------:|:------------:|
+
+|カラム名|型|概要|
+|:--:|:--:|:--:|
 | id           | integer      |              |
 | shop_name    | string       | 店名          |
 | genre        | string       | ジャンル      |
@@ -42,8 +43,9 @@
 
 
 **reviews_table**
-| Center align | Center align | Center align |
-|:-------------|-------------:|:------------:|
+
+|カラム名|型|概要|
+|:--:|:--:|:--:|
 | id           | integer      |              |
 | shop_id      | integer      |              |
 | user_id      | integer      |              |
@@ -55,8 +57,9 @@
 
 
 **images_table**
-| Center align | Center align | Center align |
-|:-------------|-------------:|:------------:|
+
+|カラム名|型|概要|
+|:--:|:--:|:--:|
 | id           | integer      |              |
 | shop_id      | integer      |              |
 | image        | text         | 写真          |
@@ -67,8 +70,9 @@
 
 
 **users_table**
-| Center align | Center align | Center align |
-|:-------------|-------------:|:------------:|
+
+|カラム名|型|概要|
+|:--:|:--:|:--:|
 | id           | integer      |              |
 | email        | integer      | メール        |
 | nickname     | text         | 名前          |
