@@ -1,1 +1,19 @@
-shops#index
+<article>
+  <% @shops.each do |shop| %>
+  <a href="/shops/<%= shop.id %>">
+    <h2>
+      <%= shop.shop_name %>
+    </h2>
+    <div>
+      <%= shop.genre %>
+    </div>
+    <div>
+      <%= shop.sales_copy %>
+    </div>
+    <div style="background-image: url(<%= shop.main_image %>); width: 400px; height: 300px;">
+    </div>
+    <hr>
+  </a>
+  <% end %>
+</article>
+

@@ -3,12 +3,26 @@
 <head>
   <title>ShopFinder</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'reset', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header id="header">
+    <div class="header_contents">
+      <h1><a href="/">Shop Finder</a></h1>
+      <p>ジャンルで絞る</p>
+    </div>
+  </header>
 
-<%= yield %>
+  <main id="main">
+    <%= yield %>
+  </main>
+
+  <footer>
+
+  </footer>
+
 
 </body>
 </html>

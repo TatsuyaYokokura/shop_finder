@@ -1,1 +1,46 @@
-shops#show
+
+<div>
+  <a href="">口コミを書く</a>
+  <a href="">口コミを見る</a>
+</div>
+
+<div>
+  <p><%= @shop.shop_name %></p>
+  <p><%= @shop.sales_copy %></p>
+  <p><%= @shop.text %></p>
+</div>
+
+<section class="shop_images">
+  <ul class="clearfix">
+    <p style="font-size: 1.5rem;">店舗写真&投稿写真部分</p>
+    <% @shop.images.each do |image| %>
+      <li>
+        <img src="<%= image.image %>" alt="" class="show_images">
+        <p><%= image.memo %></p>
+      </li>
+    <% end %>
+  </ul>
+</section>
+
+<section class="post">
+  <%= form_for [@shop, @review] do |f| %>
+    <%= f.text_area :review, placeholder: '口コミを書く', value: '', class: 'write_review' %>
+    <%= f.submit '送信', class: 'submit' %>
+  <% end %>
+</section>
+
+<article class="read_reviews">
+  <ul class="clearfix">
+    <% @shop.reviews.each do |review| %>
+      <li class="review_text"><%= review.review %></li>
+      <li class="reviewer">投稿者の名前</li><br>
+    <% end %>
+  </ul>
+</article>
+
+
+
+
+
+
+
