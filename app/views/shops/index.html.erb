@@ -1,4 +1,11 @@
-<article>
+<header style="width:100%; height:600px; background:url(<%= asset_path "top_image.jpg" %>); background-size:cover; ">
+  <div class="header_contents">
+    <h1><a href="/">Shop Finder</a></h1>
+    <p>ジャンルで絞る</p>
+  </div>
+</header>
+
+<main id="main">
   <% @shops.each do |shop| %>
   <a href="/shops/<%= shop.id %>">
     <h2>
@@ -15,5 +22,5 @@
     <hr>
   </a>
   <% end %>
-</article>
+</main>
 
